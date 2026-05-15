@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو مطعمنا الرقمي</title>
+    <!-- استدعاء خط Cairo لجمالية النص العربي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #ff9800;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* الهيدر وشعار المطعم */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* أقسام المنيو */
+        .section-title {
+            width: 100%;
+            max-width: 500px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin: 20px 0 15px 0;
+            font-size: 20px;
+        }
+
+        .menu-container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* كرت الوجبة */
+        .menu-item {
+            background-color: var(--surface-color);
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .menu-item:active {
+            transform: scale(0.98);
+        }
+
+        .item-details {
+            flex: 1;
+            padding-left: 10px;
+        }
+
+        .item-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .item-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <h1>مطعم وكافيه السعادة</h1>
+        <p>أشهى المأكولات والوجبات السريعة بين يديك</p>
+    </header>
+
+    <!-- قسم الوجبات الرئيسية -->
+    <h2 class="section-title">الوجبات الرئيسية</h2>
+    <div class="menu-container">
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">برجر لحم سوبر دبل</div>
+                <div class="item-description">قطعتين لحم مشوي، جبنة شيدر، خس، طماطم، وصلصة البرجر الخاصة.</div>
+            </div>
+            <div class="item-price">4.50 JD</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">وجبة شاورما عربي سوبر</div>
+                <div class="item-description">شاورما دجاج بخبز الصاج، بطاطا مقلية، ثومية، ومخلل.</div>
+            </div>
+            <div class="item-price">3.00 JD</div>
+        </div>
+    </div>
+
+    <!-- قسم المقبلات -->
+    <h2 class="section-title">المقبلات</h2>
+    <div class="menu-container">
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">بطاطا مقلية مقرمشة</div>
+                <div class="item-description">أصابع البطاطا الذهبية مع بهارات المطعم الخاصة.</div>
+            </div>
+            <div class="item-price">1.50 JD</div>
+        </div>
+    </div>
+
+    <!-- قسم المشروبات -->
+    <h2 class="section-title">المشروبات</h2>
+    <div class="menu-container">
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">عصير برتقال فريش</div>
+                <div class="item-description">عصير برتقال طبيعي طازج 100% بدون سكر مضاف.</div>
+            </div>
+            <div class="item-price">2.00 JD</div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>© 2026 جميع الحقوق محفوظة - مطعم السعادة</p>
+    </footer>
+
+</body>
+</html>
